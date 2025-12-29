@@ -1,0 +1,200 @@
+/* Struggles Section Component Styles */
+.struggles-section {
+    position: relative;
+    padding: 40px 0 100px 0;
+    background: #FFFFFF;
+    overflow: hidden;
+}
+
+.struggles-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.struggles-title {
+    font-family: var(--font-family-montserrat);
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.2;
+    color: #000000;
+    text-align: center;
+    margin: 0 0 80px 0;
+}
+
+.struggles-cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.struggles-card {
+    position: relative;
+    width: 315px;
+    height: 252px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 6px 0px rgba(12, 14, 68, 1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.struggles-card-content {
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.struggles-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #000000;
+    margin-top: 20px;
+}
+
+.struggles-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.struggles-card-text {
+    font-family: var(--font-family-montserrat);
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 100%;
+    color: #000000;
+    margin: 0;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    white-space: pre-line;
+    word-break: keep-all;
+}
+
+.struggles-card-text-small {
+    font-size: 19px;
+}
+
+/* Hover Effects */
+.struggles-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 0px 6px 0px rgba(12, 14, 68, 1);
+}
+
+/* Tablet Responsive Design */
+@media (min-width: 769px) and (max-width: 1100px) {
+    .struggles-cards-container {
+        gap: 20px;
+    }
+
+    .struggles-card {
+        width: 315px;
+        height: 252px;
+    }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .struggles-section {
+        padding: 60px 0;
+    }
+
+    .struggles-container {
+        padding: 0 30px;
+    }
+
+    .struggles-title {
+        font-size: 28px;
+        margin-bottom: 50px;
+    }
+
+    .struggles-cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .struggles-card {
+        width: 315px;
+        height: 252px;
+    }
+
+    .struggles-card-content {
+        padding: 28px 20px;
+        gap: 16px;
+    }
+
+    .struggles-icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .struggles-card-text {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 100%;
+    }
+}
+
+/* Small Mobile Responsive Design */
+@media (max-width: 480px) {
+    .struggles-section {
+        padding: 50px 0;
+    }
+
+    .struggles-container {
+        padding: 0 20px;
+    }
+
+    .struggles-title {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+
+    .struggles-card-content {
+        padding: 24px 16px;
+        gap: 14px;
+    }
+
+    .struggles-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .struggles-card-text {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 100%;
+    }
+}
+
+/* Focus and Accessibility */
+.struggles-card:focus {
+    outline: 2px solid #3FD1CC;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .struggles-card {
+        transition: none;
+    }
+
+    .struggles-card:hover {
+        transform: none;
+    }
+}

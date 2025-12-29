@@ -1,0 +1,238 @@
+/* Solution Section Component Styles */
+.solution-section {
+    position: relative;
+    padding: 10px 0 100px 0;
+    background: #FFFFFF;
+    overflow: hidden;
+}
+
+.solution-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.solution-title {
+    font-family: var(--font-family-montserrat);
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.2;
+    color: #000000;
+    text-align: center;
+    margin: 0 0 24px 0;
+}
+
+.solution-description {
+    font-family: var(--font-family-montserrat);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #000000;
+    text-align: center;
+    margin: 0 auto 80px auto;
+    max-width: 1200px;
+}
+
+.solution-cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.solution-card {
+    position: relative;
+    width: 315px;
+    height: 252px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 6px 0px rgba(12, 14, 68, 1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid;
+    transform: skew(-8deg);
+}
+
+.solution-card-1 {
+    border-color: #FD9D43;
+    background: #FFF5EB;
+}
+
+.solution-card-2 {
+    border-color: #5B5FD1;
+    background: #F0EFFF;
+}
+
+.solution-card-3 {
+    border-color: rgba(25, 143, 81, 1);
+    background: #E8F5E9;
+}
+
+.solution-card-4 {
+    border-color: #FD9D43;
+    background: #FFF5EB;
+}
+
+.solution-card-content {
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.solution-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 20px;
+}
+
+.solution-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.solution-card-text {
+    font-family: var(--font-family-montserrat);
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 100%;
+    color: #000000;
+    margin: 0;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+/* Hover Effects */
+.solution-card:hover {
+    transform: skew(-8deg) rotate(-2deg) scale(1.05);
+    z-index: 10;
+}
+
+/* Tablet Responsive Design */
+@media (min-width: 769px) and (max-width: 1100px) {
+    .solution-cards-container {
+        gap: 20px;
+    }
+
+    .solution-card {
+        width: 315px;
+        height: 252px;
+    }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .solution-section {
+        padding: 60px 0;
+    }
+
+    .solution-container {
+        padding: 0 30px;
+    }
+
+    .solution-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .solution-description {
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+
+    .solution-cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .solution-card {
+        width: 315px;
+        height: 252px;
+        transform: none !important;
+        margin-top: 0 !important;
+    }
+
+    .solution-card-content {
+        padding: 28px 20px;
+        gap: 16px;
+    }
+
+    .solution-icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .solution-card-text {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 100%;
+    }
+}
+
+/* Small Mobile Responsive Design */
+@media (max-width: 480px) {
+    .solution-section {
+        padding: 50px 0;
+    }
+
+    .solution-container {
+        padding: 0 20px;
+    }
+
+    .solution-title {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+    .solution-description {
+        font-size: 15px;
+        margin-bottom: 40px;
+    }
+
+    .solution-card-content {
+        padding: 24px 16px;
+        gap: 14px;
+    }
+
+    .solution-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .solution-card-text {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 100%;
+    }
+}
+
+/* Focus and Accessibility */
+.solution-card:focus {
+    outline: 2px solid #3FD1CC;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .solution-card {
+        transition: none;
+    }
+
+    .solution-card:hover {
+        transform: none;
+    }
+}
