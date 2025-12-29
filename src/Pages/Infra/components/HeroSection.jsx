@@ -1,5 +1,5 @@
 import EllipseBackground from '../../LandingPage/assets/hero-section/Ellipse 809.svg';
-import HeroImage from '../../../assets/landing/Hero14.png';
+import HeroImage from '../../../assets/landing/hero14.png';
 import CTAButton from '../../../components/CTAButton';
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
 import '../styles/HeroSection.css';
