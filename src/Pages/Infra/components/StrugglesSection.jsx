@@ -2,10 +2,10 @@ import useScrollAnimation from '../../../hooks/useScrollAnimation';
 import '../styles/StrugglesSection.css';
 
 // Import dark logo images
-import FastAdDark from '../../../assets/landing/fastad_dark.png';
-import CpmDark from '../../../assets/landing/cpm_dark.png';
-import HighDark from '../../../assets/landing/high_dark.png';
-import SkuDark from '../../../assets/landing/sku_dark.png';
+import FastAdDark from '../../../assets/landing/fastad_dark.svg';
+import CpmDark from '../../../assets/landing/cpm_dark.svg';
+import HighDark from '../../../assets/landing/high_dark.svg';
+import SkuDark from '../../../assets/landing/sku_dark.svg';
 
 const StrugglesSection = () => {
     const [sectionRef, isVisible] = useScrollAnimation();

@@ -3,9 +3,9 @@ import CTAButton from '../../../components/CTAButton';
 import '../styles/PricingSection.css';
 
 // Import pricing logos and editor image
-import RevShare from '../../../assets/landing/revshare.png';
-import Fee from '../../../assets/landing/fee.png';
-import Cpm from '../../../assets/landing/sku.png';
+import RevShare from '../../../assets/landing/revshare.svg';
+import Fee from '../../../assets/landing/fee.svg';
+import Cpm from '../../../assets/landing/sku.svg';
 import EditorImage from '../../../assets/landing/editor.png';
 
 const PricingSection = () => {

@@ -94,16 +94,19 @@
 
 .hero-image {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+
 }
 
 .hero-image-element {
-  max-width: 100%;
+  max-width: 90%;
+  width: 90%;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
   pointer-events: none;
+  transform: translateX(-40px);
 }
 
 .hero-video {
@@ -206,6 +209,18 @@
     top: -10%;
     right: -20%;
   }
+
+  .hero-image {
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero-image-element {
+    max-width: 100%;
+    width: 100%;
+    transform: translateX(0);
+  }
 }
 
 @media (max-width: 480px) {
@@ -213,4 +228,9 @@
     padding: 0 1em;
   }
 
+  .hero-image-element {
+    max-width: 100%;
+    width: 100%;
+    transform: translateX(0);
+  }
 }

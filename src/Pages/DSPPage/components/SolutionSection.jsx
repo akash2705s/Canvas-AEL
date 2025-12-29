@@ -2,10 +2,10 @@ import useScrollAnimation from '../../../hooks/useScrollAnimation';
 import '../styles/SolutionSection.css';
 
 // Import non-dark logo images
-import FastAd from '../../../assets/landing/fastad.png';
-import Cpm from '../../../assets/landing/cpm.png';
-import High from '../../../assets/landing/high.png';
-import Sku from '../../../assets/landing/sku.png';
+import FastAd from '../../../assets/landing/fastad.svg';
+import Cpm from '../../../assets/landing/cpm.svg';
+import High from '../../../assets/landing/high.svg';
+import Sku from '../../../assets/landing/sku.svg';
 
 const SolutionSection = () => {
     const [sectionRef, isVisible] = useScrollAnimation();
