@@ -122,12 +122,15 @@
 }
 
 .pricing-image-wrapper {
-    width: 85%;
-    max-width: 85%;
-    border-radius: 12px;
+    width: 90%;
+    max-width: 90%;
+    border-radius: 0;
     overflow: hidden;
-    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
-
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;
 }
 
 .pricing-editor-image {
@@ -136,7 +139,7 @@
     display: block;
     object-fit: cover;
     object-position: left center;
-    transform: translateX(-10px);
+    transform: translateX(10px);
 }
 
 /* Hover Effects */
