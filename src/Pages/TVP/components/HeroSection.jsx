@@ -1,5 +1,5 @@
 import EllipseBackground from '../../LandingPage/assets/hero-section/Ellipse 809.svg';
-import HeroImage from '../../../assets/landing/hero9.png';
+import HeroVideo from '../../../assets/Videos/tvp/video30.mp4';
 import CTAButton from '../../../components/CTAButton';
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
 import '../styles/HeroSection.css';
@@ -32,10 +32,13 @@ const HeroSection = () => {
             </div>
           </div>
           <div ref={imageRef} className={`hero-image slide-in-right ${isImageVisible ? 'visible' : ''}`}>
-            <img
-              src={HeroImage}
-              alt="Canvas Hero"
-              className="hero-image-element"
+            <video
+              src={HeroVideo}
+              className="hero-video"
+              autoPlay
+              loop
+              muted
+              playsInline
             />
           </div>
         </div>

@@ -110,11 +110,13 @@
 }
 
 .hero-video {
-  max-width: 100%;
+  max-width: 90%;
+  width: 90%;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
   pointer-events: none;
+  transform: translateX(-40px);
 }
 
 .hero-video::-webkit-media-controls {
@@ -221,6 +223,12 @@
     width: 100%;
     transform: translateX(0);
   }
+
+  .hero-video {
+    max-width: 100%;
+    width: 100%;
+    transform: translateX(0);
+  }
 }
 
 @media (max-width: 480px) {
@@ -229,6 +237,12 @@
   }
 
   .hero-image-element {
+    max-width: 100%;
+    width: 100%;
+    transform: translateX(0);
+  }
+
+  .hero-video {
     max-width: 100%;
     width: 100%;
     transform: translateX(0);
