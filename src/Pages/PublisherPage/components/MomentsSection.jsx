@@ -13,14 +13,17 @@ const MomentsSection = () => {
     {
       video: Video1,
       title: 'Poll inside podcast-style show',
+      descriptor: 'Capture real-time intent during playback',
     },
     {
       video: Video2,
       title: 'Reward ad for loyalty enrollment',
+      descriptor: 'Opt-in reward moments',
     },
     {
       video: Video3,
       title: 'Multi-choice product ad',
+      descriptor: 'Let viewers choose. Log intent instantly.',
     },
   ];
 
@@ -49,7 +52,10 @@ const MomentsSection = () => {
                 />
               </div>
               <div className="moment-text-wrapper">
-                <p className="moment-text">{moment.title}</p>
+                <div className="moment-text-container">
+                  <p className="moment-text">{moment.title}</p>
+                  <p className="moment-descriptor">{moment.descriptor}</p>
+                </div>
               </div>
             </div>
           ))}

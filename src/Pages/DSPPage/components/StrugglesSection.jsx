@@ -15,19 +15,19 @@ const StrugglesSection = () => {
     const struggles = [
         {
             icon: CpmDark,
-            text: "Control the player environment"
+            text: "No access to in-session behavior"
         },
         {
             icon: SkuDark,
-            text: "Add interactivity without publisher engineering"
+            text: "Signals arrive post-playback"
         },
         {
             icon: HighDark,
-            text: "Guarantee engagement inside ad pods"
+            text: "Optimization stops at CPM & completion"
         },
         {
             icon: FastAdDark,
-            text: "Differentiate beyond regular video"
+            text: "No deterministic intent signal in CTV"
         }
     ];
 
@@ -36,7 +36,7 @@ const StrugglesSection = () => {
             <div className="struggles-container">
                 {/* Section Title */}
                 <h2 ref={titleRef} className={`struggles-title fade-in-section ${isTitleVisible ? 'visible' : ''}`}>
-                    AGENCIES CANNOT:
+                    DSPs are forced to optimize blind because:
                 </h2>
 
                 {/* Struggles Cards */}

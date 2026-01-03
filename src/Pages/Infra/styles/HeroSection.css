@@ -3,7 +3,8 @@
   position: relative;
   padding: var(--hero-padding);
   background: var(--hero-bg-color);
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
   margin: 0;
 }
 
@@ -58,6 +59,7 @@
   padding: 0 3em;
   position: relative;
   z-index: 1;
+  overflow: visible;
 }
 
 .hero-content {
@@ -65,6 +67,7 @@
   grid-template-columns: 1fr 1fr;
   gap: var(--hero-gap);
   align-items: center;
+  overflow: visible;
 }
 
 .hero-text {
@@ -77,7 +80,7 @@
   font-family: var(--font-family-montserrat);
   font-weight: 700;
   /*font-size: 48px;*/
-  font-size: 2em;
+  font-size: 32px;
   line-height: 1.2;
   color: var(--hero-title-color);
   margin: 0;
@@ -96,16 +99,39 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: visible;
+}
+
+.hero-image-wrapper {
+  position: relative;
 }
 
 .hero-image-element {
-  max-width: 130%;
-  width: 130%;
+  max-width: 115%;
+  width: 115%;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
   pointer-events: none;
-  margin-left: -60px;
+  margin-left: -40px;
+}
+
+.hero-image-label {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-family-montserrat);
+  font-weight: 500;
+  font-size: 15px;
+  color: #4a4a4a;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .hero-video {
@@ -179,9 +205,15 @@
   }
 
   .hero-image-element {
-    max-width: 110%;
-    width: 110%;
-    margin-left: -30px;
+    max-width: 105%;
+    width: 105%;
+    margin-left: -20px;
+  }
+
+  .hero-image-label {
+    font-size: 14px;
+    padding: 8px 16px;
+    bottom: -45px;
   }
 }
 
@@ -225,6 +257,18 @@
     width: 100%;
     margin-left: 0;
   }
+
+  .hero-image-wrapper {
+    width: 100%;
+  }
+
+  .hero-image-label {
+    font-size: 13px;
+    padding: 8px 14px;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 480px) {
@@ -236,5 +280,12 @@
     max-width: 100%;
     width: 100%;
     margin-left: 0;
+  }
+
+  .hero-image-label {
+    font-size: 12px;
+    padding: 6px 12px;
+    bottom: -30px;
+    letter-spacing: 0.01em;
   }
 }

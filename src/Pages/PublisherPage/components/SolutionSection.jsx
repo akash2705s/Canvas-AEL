@@ -20,15 +20,15 @@ const SolutionSection = () => {
         },
         {
             icon: Sku,
-            text: "New premium interactive ad SKUs"
+            text: "Net-new premium interactive SKUs"
         },
         {
             icon: High,
-            text: 'Higher watch time via "interaction → ad skip"'
+            text: 'Higher watch time through opt-in interaction paths'
         },
         {
             icon: FastAd,
-            text: "Faster ad format experimentation"
+            text: "Faster ad format testing — no redeploys"
         }
     ];
 
@@ -42,7 +42,8 @@ const SolutionSection = () => {
 
                 {/* Section Description */}
                 <p ref={descriptionRef} className={`solution-description fade-in-section ${isDescriptionVisible ? 'visible' : ''}`}>
-                    Canvas adds a thin runtime layer to your player, allowing you to create interactive ad units inside content or inside ad pods — without touching SSAI or encoding pipelines.
+                    Canvas runs as a lightweight runtime inside your player. It enables in-session interactive ad moments. <br />No SSAI. No encoding changes.
+
                 </p>
 
                 {/* Solution Cards */}
@@ -53,9 +54,16 @@ const SolutionSection = () => {
                                 <div className="solution-icon">
                                     <img src={solution.icon} alt={solution.text} />
                                 </div>
-                                <p className="solution-card-text">
-                                    {solution.text}
-                                </p>
+                                <div className="solution-text-container">
+                                    <p className="solution-card-text">
+                                        {solution.text}
+                                    </p>
+                                    {index === 0 && (
+                                        <p className="solution-card-footnote">
+                                            vs. standard CTV ad formats
+                                        </p>
+                                    )}
+                                </div>
                             </div>
                         </div>
                     ))}

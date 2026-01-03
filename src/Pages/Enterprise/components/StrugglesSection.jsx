@@ -15,19 +15,19 @@ const StrugglesSection = () => {
     const struggles = [
         {
             icon: CpmDark,
-            text: "CTV ads are passive"
+            text: "CTV ads generate no action signal"
         },
         {
             icon: SkuDark,
-            text: "No way to measure active intent"
+            text: "No moment-level intent measurement"
         },
         {
             icon: HighDark,
-            text: "No personalization inside ad pods"
+            text: "No personalization inside ad runtime"
         },
         {
             icon: FastAdDark,
-            text: "Engagement drop-off is high"
+            text: "Engagement drops post-impression"
         }
     ];
 
@@ -36,7 +36,7 @@ const StrugglesSection = () => {
             <div className="struggles-container">
                 {/* Section Title */}
                 <h2 ref={titleRef} className={`struggles-title fade-in-section ${isTitleVisible ? 'visible' : ''}`}>
-                    BRANDS STRUGGLE BECAUSE:
+                    Enterprise brands struggle to:
                 </h2>
 
                 {/* Struggles Cards */}
@@ -48,11 +48,7 @@ const StrugglesSection = () => {
                                     <img src={struggle.icon} alt={struggle.text} />
                                 </div>
                                 <p className="struggles-card-text">
-                                    {index === 0 ? (
-                                        <>CTV ads are<br />passive</>
-                                    ) : (
-                                        struggle.text
-                                    )}
+                                    {struggle.text}
                                 </p>
                             </div>
                         </div>

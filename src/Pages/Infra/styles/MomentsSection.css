@@ -16,9 +16,10 @@
 .moments-title {
   font-family: var(--font-family-montserrat);
   font-weight: 700;
-  font-size: 2.5em;
-  line-height: 1.3;
-  color: #000000;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: #1a1a1a;
   text-align: center;
   margin: 48px 0 48px 0;
 }
@@ -176,6 +177,8 @@
 
   .moments-title {
     font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
     margin-bottom: 32px;
   }
 
@@ -229,6 +232,8 @@
 
   .moments-title {
     font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
     margin-bottom: 24px;
   }
 

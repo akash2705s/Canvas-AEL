@@ -20,13 +20,11 @@ const HeroSection = () => {
         <div className="hero-content">
           <div ref={textRef} className={`hero-text slide-in-left ${isTextVisible ? 'visible' : ''}`}>
             <h1 className="hero-title">
-              MAKE YOUR CTV ADS<br />
-              INTERACTIVE. ENGAGE VIEWERS,<br />
-              NOT JUST REACH THEM.
+              Turn CTV Ads Into Measurable Actions — Not Just Reach
             </h1>
-            {/* <p className="hero-description">
-              Drop Canvas into your player. Trigger interactive ads<br />anywhere. Increase yield instantly.
-            </p> */}
+            <p className="hero-description">
+              Capture real viewer intent inside CTV ads, in-session, across premium publisher inventory.
+            </p>
             <div className="hero-cta-container">
               <CTAButton
                 name='Request Demo'
@@ -34,14 +32,33 @@ const HeroSection = () => {
             </div>
           </div>
           <div ref={imageRef} className={`hero-image slide-in-right ${isImageVisible ? 'visible' : ''}`}>
-            <video
-              src={HeroVideo}
-              className="hero-video"
-              autoPlay
-              loop
-              muted
-              playsInline
-            />
+            <div style={{ position: 'relative' }}>
+              <video
+                src={HeroVideo}
+                className="hero-video"
+                autoPlay
+                loop
+                muted
+                playsInline
+              />
+              <span style={{
+                position: 'absolute',
+                bottom: '16px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                fontFamily: 'var(--font-family-montserrat)',
+                fontWeight: 400,
+                fontSize: '13px',
+                color: '#ffffff',
+                backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                padding: '8px 16px',
+                borderRadius: '6px',
+                letterSpacing: '0.02em',
+                whiteSpace: 'nowrap'
+              }}>
+                In-session choice • Runtime signal • No QR dependency
+              </span>
+            </div>
           </div>
         </div>
       </div>

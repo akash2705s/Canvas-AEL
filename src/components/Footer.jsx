@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom';
 import '../styles/Footer.css';
 import CTAButton from './CTAButton';
 
@@ -8,6 +9,10 @@ import YoutubeIcon from '../assets/Footer/yt.svg';
 import LinkedinIcon from '../assets/Footer/linkedin.svg';
 
 const Footer = () => {
+    const location = useLocation();
+    const isInfraPage = location.pathname === '/infra';
+    const isTVPPage = location.pathname === '/tvp';
+    const isEnterprisePage = location.pathname === '/enterprise';
     return (
         <footer className="footer-section">
             <div className="footer-container">
@@ -15,7 +20,16 @@ const Footer = () => {
                 <div className="footer-main-content">
                     {/* Left Column - Get Started */}
                     <div className="footer-left-column">
-                        <h3 className="footer-section-title">Get Started</h3>
+                        <h3 className="footer-section-title">
+                            {isTVPPage
+                                ? 'Request OEM Demo'
+                                : isInfraPage
+                                    ? 'Request Infra Demo'
+                                    : isEnterprisePage
+                                        ? 'Request Enterprise Demo'
+                                        : 'Request DSP Demo'
+                            }
+                        </h3>
                         <nav className="footer-nav">
                             <div className="footer-nav-columns">
                                 {/* First Column */}
@@ -53,31 +67,39 @@ const Footer = () => {
 
                     {/* Right Column - Company Info */}
                     <div className="footer-right-column">
-                        <h3 className="footer-company-title">Canvas Space Inc.</h3>
+                        <h3 className="footer-company-title">
+                            {isTVPPage
+                                ? <>Canvas Space Inc.<br /> — Native CTV Interaction Infrastructure</>
+                                : isInfraPage
+                                    ? <>Canvas Space Inc.<br />—Runtime Interaction Infrastructure for CTV</>
+                                    : isEnterprisePage
+                                        ? 'Canvas Space — Runtime Interaction & Intent Infrastructure for CTV'
+                                        : <>Canvas Space Inc. <br />— CTV Interaction Intelligence</>
+                            }
+                        </h3>
                         <div className="footer-company-info">
                             <p className="footer-address">
-                                5548, Abington Drive, Newark,<br />
-                                California, 94560
-                            </p>
-                            <p className="footer-email">
-                                <a href="mailto:hello@canvas.space" className="footer-email-link">
-                                    hello@canvas.space
-                                </a>
+                                {isTVPPage
+                                    ? 'One runtime. Platform-wide. Monetizable.'
+                                    : isInfraPage
+                                        ? 'Deterministic intent. In-session. At scale.'
+                                        : 'Deterministic intent. In-session. At scale.'
+                                }
                             </p>
                         </div>
 
                         {/* Social Media Icons */}
                         <div className="footer-social-media">
-                            <a href="#facebook" className="footer-social-link" aria-label="Facebook">
+                            <a href="https://www.facebook.com/canvsspace/" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Facebook">
                                 <img src={FacebookIcon} alt="Facebook" className="footer-social-icon" />
                             </a>
-                            <a href="#twitter" className="footer-social-link" aria-label="Twitter">
+                            <a href="https://x.com/CanvasSpace" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Twitter">
                                 <img src={TwitterIcon} alt="Twitter" className="footer-social-icon" />
                             </a>
-                            <a href="#youtube" className="footer-social-link" aria-label="YouTube">
+                            <a href="https://www.youtube.com/@canvas_space" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="YouTube">
                                 <img src={YoutubeIcon} alt="YouTube" className="footer-social-icon" />
                             </a>
-                            <a href="#linkedin" className="footer-social-link" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/company/canvas-space/" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="LinkedIn">
                                 <img src={LinkedinIcon} alt="LinkedIn" className="footer-social-icon" />
                             </a>
                         </div>

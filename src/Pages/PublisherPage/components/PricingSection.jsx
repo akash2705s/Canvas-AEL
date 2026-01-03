@@ -16,15 +16,18 @@ const PricingSection = () => {
     const pricingModels = [
         {
             icon: RevShare,
-            text: "Rev-share option"
+            text: "Rev-share option",
+            microCopy: "Aligns incentives with yield uplift"
         },
         {
             icon: Cpm,
-            text: "CPMi model"
+            text: "CPMi model",
+            microCopy: "Pay for interaction, not impressions"
         },
         {
             icon: Fee,
-            text: "Platform fee"
+            text: "Platform fee",
+            microCopy: "For high-volume or enterprise deployments"
         }
     ];
 
@@ -44,7 +47,10 @@ const PricingSection = () => {
                                             <img src={model.icon} alt={model.text} />
                                         </div>
                                         <div className="pricing-divider"></div>
-                                        <p className="pricing-card-text">{model.text}</p>
+                                        <div className="pricing-text-wrapper">
+                                            <p className="pricing-card-text">{model.text}</p>
+                                            <p className="pricing-card-microcopy">{model.microCopy}</p>
+                                        </div>
                                     </div>
                                 </div>
                             ))}

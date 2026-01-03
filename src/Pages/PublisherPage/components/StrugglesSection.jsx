@@ -15,19 +15,19 @@ const StrugglesSection = () => {
     const struggles = [
         {
             icon: CpmDark,
-            text: "Static mid-rolls have flat engagement"
+            text: "Static mid-rolls generate attention, not intent."
         },
         {
             icon: SkuDark,
-            text: "CPM ceilings are hit quickly"
+            text: "CPMs plateau without new signal layers"
         },
         {
             icon: HighDark,
-            text: "SSAI-driven interactivity is rigid and slow"
+            text: "SSAI limits experimentation and iteration speed"
         },
         {
             icon: FastAdDark,
-            text: "Engineering teams can't support rapid ad experimentation"
+            text: "Player teams can’t keep rebuilding for every ad idea"
         }
     ];
 
@@ -48,11 +48,7 @@ const StrugglesSection = () => {
                                     <img src={struggle.icon} alt={struggle.text} />
                                 </div>
                                 <p className="struggles-card-text">
-                                    {index === 1 ? (
-                                        <>CPM ceilings are<br />hit quickly</>
-                                    ) : (
-                                        struggle.text
-                                    )}
+                                    {struggle.text}
                                 </p>
                             </div>
                         </div>

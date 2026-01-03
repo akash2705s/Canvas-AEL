@@ -20,13 +20,12 @@ const HeroSection = () => {
         <div className="hero-content">
           <div ref={textRef} className={`hero-text slide-in-left ${isTextVisible ? 'visible' : ''}`}>
             <h1 className="hero-title">
-              ADD MOMENT-LEVEL<br />
-              INTERACTIVITY TO YOUR STACK<br />
-              — NO REBUILD REQUIRED.
+              ADD RUNTIME INTERACTION <br /> TO YOUR STACK <br />
+              — NO REBUILD REQUIRED
             </h1>
-            {/* <p className="hero-description">
-              Drop Canvas into your player. Trigger interactive ads<br />anywhere. Increase yield instantly.
-            </p> */}
+            <p className="hero-description">
+              Enable moment-level interactivity across FAST, CTV <br />and live without touching SSAI or core infra.
+            </p>
             <div className="hero-cta-container">
               <CTAButton
                 name='Request Demo'
@@ -34,11 +33,16 @@ const HeroSection = () => {
             </div>
           </div>
           <div ref={imageRef} className={`hero-image slide-in-right ${isImageVisible ? 'visible' : ''}`}>
-            <img
-              src={HeroImage}
-              alt="Canvas Hero"
-              className="hero-image-element"
-            />
+            <div className="hero-image-wrapper">
+              <img
+                src={HeroImage}
+                alt="Canvas Hero"
+                className="hero-image-element"
+              />
+              <span className="hero-image-label">
+                Drop-in runtime module
+              </span>
+            </div>
           </div>
         </div>
       </div>

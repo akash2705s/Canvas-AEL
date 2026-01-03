@@ -16,19 +16,19 @@ const SolutionSection = () => {
     const solutions = [
         {
             icon: Cpm,
-            text: "New revenue SKU"
+            text: "New monetizable interaction SKU"
         },
         {
             icon: Sku,
-            text: "Faster sales cycles"
+            text: "Shorter enterprise sales cycles"
         },
         {
             icon: High,
-            text: 'Competitive differentiation'
+            text: "Clear differentiation vs peers"
         },
         {
             icon: FastAd,
-            text: "Zero engineering friction"
+            text: "No changes to core infra"
         }
     ];
 
@@ -42,7 +42,7 @@ const SolutionSection = () => {
 
                 {/* Section Description */}
                 <p ref={descriptionRef} className={`solution-description fade-in-section ${isDescriptionVisible ? 'visible' : ''}`}>
-                    Canvas integrates as a runtime module your platform can OEM. You keep your workflows intact;<br />we provide the interaction logic, editor, and reporting.
+                    Canvas integrates as a drop-in runtime module<br />Your workflows stay intact. We handle interaction, logic, and reporting.
                 </p>
 
                 {/* Solution Cards */}

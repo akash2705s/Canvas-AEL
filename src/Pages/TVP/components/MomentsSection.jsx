@@ -12,22 +12,22 @@ const MomentsSection = () => {
   const moments = [
     {
       video: Video1,
-      title: 'Platform-wide interactive ads',
+      title: 'Native interactive ads across all apps',
     },
     {
       video: Video2,
-      title: 'Universal "moment trigger" across apps',
+      title: 'Universal runtime triggers across content & ads',
     },
     {
       video: Video3,
-      title: 'Sponsored content moments',
+      title: 'Sponsored platform moments & takeovers',
     },
   ];
 
   return (
     <section ref={sectionRef} className={`moments-section fade-in-section ${isVisible ? 'visible' : ''}`}>
       <div className="moments-container">
-        <h2 className="moments-title">HIGH-IMPACT MOMENTS THAT CANVAS UNLOCKS</h2>
+        <h2 className="moments-title">Interaction moments unlocked at the platform layer</h2>
 
         <div
           ref={rowsRef}
@@ -50,11 +50,7 @@ const MomentsSection = () => {
               </div>
               <div className="moment-text-wrapper">
                 <p className="moment-text">
-                  {index === 1 ? (
-                    <>Universal "moment trigger"<br />across apps</>
-                  ) : (
-                    moment.title
-                  )}
+                  {moment.title}
                 </p>
               </div>
             </div>

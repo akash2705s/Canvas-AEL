@@ -12,22 +12,22 @@ const MomentsSection = () => {
   const moments = [
     {
       video: Video1,
-      title: 'Interactive storytelling',
+      title: 'Story choice paths → intent classification',
     },
     {
       video: Video2,
-      title: 'Product selection',
+      title: 'Explicit preference & consideration signals',
     },
     {
       video: Video3,
-      title: 'Voting & gamified ad units',
+      title: 'Real-time engagement + outcome signals',
     },
   ];
 
   return (
     <section ref={sectionRef} className={`moments-section fade-in-section ${isVisible ? 'visible' : ''}`}>
       <div className="moments-container">
-        <h2 className="moments-title">HIGH-IMPACT MOMENTS THAT CANVAS UNLOCKS</h2>
+        <h2 className="moments-title">Interaction signals DSPs can finally optimize on</h2>
 
         <div
           ref={rowsRef}

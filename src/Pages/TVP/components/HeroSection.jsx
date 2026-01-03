@@ -20,11 +20,11 @@ const HeroSection = () => {
         <div className="hero-content">
           <div ref={textRef} className={`hero-text slide-in-left ${isTextVisible ? 'visible' : ''}`}>
             <h1 className="hero-title">
-              NATIVE INTERACTIVITY FOR<br />EVERY APP ACROSS YOUR TV PLATFORM.
+              NATIVE INTERACTION INFRASTRUCTURE<br /> FOR YOUR TV PLATFORM
             </h1>
-            {/* <p className="hero-description">
-              Drop Canvas into your player. Trigger interactive ads<br />anywhere. Increase yield instantly.
-            </p> */}
+            <p className="hero-description">
+              Enable in-session interaction across apps without app rewrites or SSAI changes.
+            </p>
             <div className="hero-cta-container">
               <CTAButton
                 name='Request Demo'

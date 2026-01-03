@@ -16,19 +16,19 @@ const SolutionSection = () => {
     const solutions = [
         {
             icon: Cpm,
-            text: "Premium pricing on interactive units"
+            text: "Deterministic in-session intent signals"
         },
         {
             icon: Sku,
-            text: "Higher brand lift metrics"
+            text: "New optimization layer beyond CPM"
         },
         {
             icon: High,
-            text: 'Better story formats'
+            text: "Higher effective CPM via interaction"
         },
         {
             icon: FastAd,
-            text: "No extra workflows for agency teams"
+            text: "Works inside existing DSP buying flows"
         }
     ];
 
@@ -42,7 +42,7 @@ const SolutionSection = () => {
 
                 {/* Section Description */}
                 <p ref={descriptionRef} className={`solution-description fade-in-section ${isDescriptionVisible ? 'visible' : ''}`}>
-                    Canvas lets agencies attach interactive logic to their creatives and activate them on any Canvas-enabled publisher through a lightweight player integration.
+                    Canvas injects interaction signals directly into live CTV playback<br />No SSAI changes. No payload overhead. No workflow disruption.
                 </p>
 
                 {/* Solution Cards */}
@@ -54,13 +54,7 @@ const SolutionSection = () => {
                                     <img src={solution.icon} alt={solution.text} />
                                 </div>
                                 <p className="solution-card-text">
-                                    {index === 1 ? (
-                                        <>Higher brand<br />lift metrics</>
-                                    ) : index === 2 ? (
-                                        <>Better story<br />formats</>
-                                    ) : (
-                                        solution.text
-                                    )}
+                                    {solution.text}
                                 </p>
                             </div>
                         </div>

@@ -16,19 +16,19 @@ const SolutionSection = () => {
     const solutions = [
         {
             icon: Cpm,
-            text: "Platform-wide revenue via rev-share"
+            text: "New platform-level revenue surface"
         },
         {
             icon: Sku,
-            text: "OEM-level analytics"
+            text: "OEM-wide interaction analytics"
         },
         {
             icon: High,
-            text: 'Differentiation vs competitors'
+            text: "Native differentiation vs other TV OS"
         },
         {
             icon: FastAd,
-            text: "Lower burden on app developers"
+            text: "Zero additional load on app developers"
         }
     ];
 
@@ -42,7 +42,7 @@ const SolutionSection = () => {
 
                 {/* Section Description */}
                 <p ref={descriptionRef} className={`solution-description fade-in-section ${isDescriptionVisible ? 'visible' : ''}`}>
-                    Canvas becomes a platform-level service enabling interactivity across multiple apps without app rewrites.<br />OEMs get a scalable monetization and engagement layer.
+                    Canvas runs as a platform-level interaction service<br />One runtime. Multiple apps. No rewrites.
                 </p>
 
                 {/* Solution Cards */}
@@ -54,11 +54,7 @@ const SolutionSection = () => {
                                     <img src={solution.icon} alt={solution.text} />
                                 </div>
                                 <p className="solution-card-text">
-                                    {index === 1 ? (
-                                        <>OEM-level<br />analytics</>
-                                    ) : (
-                                        solution.text
-                                    )}
+                                    {solution.text}
                                 </p>
                             </div>
                         </div>

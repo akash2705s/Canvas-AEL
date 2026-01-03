@@ -15,19 +15,19 @@ const StrugglesSection = () => {
     const struggles = [
         {
             icon: CpmDark,
-            text: "Lack of unified interactivity"
+            text: "No platform-wide interaction standard"
         },
         {
             icon: SkuDark,
-            text: "Reliance on publishers to innovate"
+            text: "Innovation locked at the app layer"
         },
         {
             icon: HighDark,
-            text: "No new revenue surface"
+            text: "No native monetizable interaction layer"
         },
         {
             icon: FastAdDark,
-            text: "Engineering challenges for native interaction"
+            text: "High cost to support custom app logic"
         }
     ];
 
@@ -36,7 +36,7 @@ const StrugglesSection = () => {
             <div className="struggles-container">
                 {/* Section Title */}
                 <h2 ref={titleRef} className={`struggles-title fade-in-section ${isTitleVisible ? 'visible' : ''}`}>
-                    TV OEMs FACE:
+                    TV platforms struggle because:
                 </h2>
 
                 {/* Struggles Cards */}
@@ -48,11 +48,7 @@ const StrugglesSection = () => {
                                     <img src={struggle.icon} alt={struggle.text} />
                                 </div>
                                 <p className="struggles-card-text">
-                                    {index === 2 ? (
-                                        <>No new revenue<br />surface</>
-                                    ) : (
-                                        struggle.text
-                                    )}
+                                    {struggle.text}
                                 </p>
                             </div>
                         </div>

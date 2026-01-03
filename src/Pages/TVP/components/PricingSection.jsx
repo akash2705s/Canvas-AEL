@@ -16,15 +16,15 @@ const PricingSection = () => {
     const pricingModels = [
         {
             icon: RevShare,
-            text: "OEM license fee"
+            text: "Platform license"
         },
         {
             icon: Cpm,
-            text: "Revenue share"
+            text: "Interaction-driven revenue share"
         },
         {
             icon: Fee,
-            text: "Platform distribution pricing"
+            text: "Distribution & default placement models"
         }
     ];
 

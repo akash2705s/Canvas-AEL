@@ -12,22 +12,22 @@ const MomentsSection = () => {
   const moments = [
     {
       video: Video1,
-      title: 'Product quiz',
+      title: 'Product discovery moments',
     },
     {
       video: Video2,
-      title: 'Choose-your-story',
+      title: 'Choice-driven storytelling',
     },
     {
       video: Video3,
-      title: 'Retail shoppable moment',
+      title: 'In-session commerce triggers',
     },
   ];
 
   return (
     <section ref={sectionRef} className={`moments-section fade-in-section ${isVisible ? 'visible' : ''}`}>
       <div className="moments-container">
-        <h2 className="moments-title">HIGH-IMPACT MOMENTS THAT CANVAS UNLOCKS</h2>
+        <h2 className="moments-title">Enterprise-grade interactive moments</h2>
 
         <div
           ref={rowsRef}

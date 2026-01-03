@@ -1,0 +1,140 @@
+/* Ecosystem Section Component Styles */
+.ecosystem-section {
+    position: relative;
+    padding: 80px 0;
+    background: #FFFFFF;
+    overflow: hidden;
+    margin: 0;
+}
+
+.ecosystem-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 3em;
+    position: relative;
+    z-index: 1;
+}
+
+.ecosystem-title {
+    font-family: var(--font-family-montserrat);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: #1a1a1a;
+    text-align: center;
+    margin: 0 0 16px 0;
+}
+
+.ecosystem-subtitle {
+    font-family: var(--font-family-montserrat);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+    color: #4a4a4a;
+    text-align: center;
+    margin: 0 0 60px 0;
+}
+
+.ecosystem-logos-container {
+    width: 100%;
+}
+
+.ecosystem-logos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    align-items: center;
+    justify-items: center;
+}
+
+.ecosystem-logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.ecosystem-logo-item:hover {
+    opacity: 1;
+}
+
+.ecosystem-logo-item img {
+    max-width: 100%;
+    max-height: 60px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Tablet Responsive Design */
+@media (min-width: 769px) and (max-width: 1439px) {
+    .ecosystem-container {
+        padding: 0 2em;
+    }
+
+    .ecosystem-title {
+        font-size: 32px;
+    }
+
+    .ecosystem-subtitle {
+        font-size: 16px;
+    }
+
+    .ecosystem-logos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 30px;
+    }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .ecosystem-section {
+        padding: 60px 0;
+    }
+
+    .ecosystem-container {
+        padding: 0 1em;
+    }
+
+    .ecosystem-title {
+        font-size: 28px;
+    }
+
+    .ecosystem-subtitle {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .ecosystem-logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .ecosystem-logo-item {
+        min-height: 60px;
+    }
+
+    .ecosystem-logo-item img {
+        max-height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ecosystem-title {
+        font-size: 24px;
+    }
+
+    .ecosystem-subtitle {
+        font-size: 14px;
+    }
+
+    .ecosystem-logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+

@@ -16,15 +16,15 @@ const PricingSection = () => {
     const pricingModels = [
         {
             icon: RevShare,
-            text: "Per-campaign activation fee"
+            text: "CPMI (Cost per meaningful interaction)"
         },
         {
             icon: Cpm,
-            text: "Per-interaction billing"
+            text: "Signal-based uplift models"
         },
         {
             icon: Fee,
-            text: "Creative partner subscription"
+            text: "Enterprise DSP integrations"
         }
     ];
 

@@ -16,22 +16,22 @@ const PricingSection = () => {
     const pricingModels = [
         {
             icon: RevShare,
-            text: "Per-campaign fee"
+            text: "Per-campaign activation"
         },
         {
             icon: Cpm,
-            text: "Per engagement"
+            text: "Per-interaction pricing"
         },
         {
             icon: Fee,
-            text: "Enterprise subscription"
+            text: "Enterprise license"
         }
     ];
 
     return (
         <section ref={sectionRef} className={`pricing-section fade-in-section ${isVisible ? 'visible' : ''}`}>
             <div className="pricing-container">
-                <h2 className="pricing-title">PRICING</h2>
+                <h2 className="pricing-title">Enterprise commercial models</h2>
 
                 <div className="pricing-content">
                     {/* Left Column - Pricing Cards */}

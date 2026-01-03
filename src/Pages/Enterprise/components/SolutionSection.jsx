@@ -16,19 +16,19 @@ const SolutionSection = () => {
     const solutions = [
         {
             icon: Cpm,
-            text: "Higher brand recall"
+            text: "Higher brand recall & action"
         },
         {
             icon: Sku,
-            text: "Real-time behavioral insights"
+            text: "Real-time intent signals"
         },
         {
             icon: High,
-            text: 'Interaction → reward / skip formats'
+            text: "Choice, reward, and skip-based formats"
         },
         {
             icon: FastAd,
-            text: "Cross-publisher activation"
+            text: "Cross-publisher activation at scale"
         }
     ];
 
@@ -42,7 +42,7 @@ const SolutionSection = () => {
 
                 {/* Section Description */}
                 <p ref={descriptionRef} className={`solution-description fade-in-section ${isDescriptionVisible ? 'visible' : ''}`}>
-                    Canvas gives brands access to an editor + runtime so they can deploy interactive experiences on<br />publisher inventory without custom engineering.
+                    Canvas gives brands a runtime interaction layer<br />Deploy interactive ad experiences across publishers without custom engineering.
                 </p>
 
                 {/* Solution Cards */}
@@ -54,11 +54,7 @@ const SolutionSection = () => {
                                     <img src={solution.icon} alt={solution.text} />
                                 </div>
                                 <p className="solution-card-text">
-                                    {index === 1 ? (
-                                        <>Real-time<br />behavioral insights</>
-                                    ) : (
-                                        solution.text
-                                    )}
+                                    {solution.text}
                                 </p>
                             </div>
                         </div>

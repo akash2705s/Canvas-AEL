@@ -15,19 +15,19 @@ const StrugglesSection = () => {
     const struggles = [
         {
             icon: CpmDark,
-            text: "Miss interactivity when pitching"
+            text: "Lack native interaction in sales pitches"
         },
         {
             icon: SkuDark,
-            text: "Rely on SSAI models"
+            text: "Limited to SSAI-only innovation"
         },
         {
             icon: HighDark,
-            text: "Lose deals due to missing capability"
+            text: "Lose deals due to missing interaction layer"
         },
         {
             icon: FastAdDark,
-            text: "Cannot justify R&D for custom interactive layers"
+            text: "Cannot justify custom interaction R&D"
         }
     ];
 
@@ -36,7 +36,7 @@ const StrugglesSection = () => {
             <div className="struggles-container">
                 {/* Section Title */}
                 <h2 ref={titleRef} className={`struggles-title fade-in-section ${isTitleVisible ? 'visible' : ''}`}>
-                    INFRA PLATFORMS:
+                    INFRASTRUCTURE PLATFORMS STRUGGLE TO:
                 </h2>
 
                 {/* Struggles Cards */}
@@ -47,14 +47,8 @@ const StrugglesSection = () => {
                                 <div className="struggles-icon">
                                     <img src={struggle.icon} alt={struggle.text} />
                                 </div>
-                                <p className={`struggles-card-text ${index === 3 ? 'struggles-card-text-small' : ''}`}>
-                                    {index === 1 ? (
-                                        <>Rely on SSAI<br />models</>
-                                    ) : index === 3 ? (
-                                        <>Cannot justify R&D for<br />custom interactive layers</>
-                                    ) : (
-                                        struggle.text
-                                    )}
+                                <p className="struggles-card-text">
+                                    {struggle.text}
                                 </p>
                             </div>
                         </div>

@@ -17,9 +17,10 @@
 .solution-title {
     font-family: var(--font-family-montserrat);
     font-weight: 700;
-    font-size: 42px;
+    font-size: 32px;
     line-height: 1.2;
-    color: #000000;
+    letter-spacing: -0.03em;
+    color: #1a1a1a;
     text-align: center;
     margin: 0 0 24px 0;
 }
@@ -146,6 +147,8 @@
 
     .solution-title {
         font-size: 28px;
+        line-height: 1.2;
+        letter-spacing: -0.03em;
         margin-bottom: 20px;
     }
 
@@ -196,6 +199,8 @@
 
     .solution-title {
         font-size: 24px;
+        line-height: 1.2;
+        letter-spacing: -0.03em;
         margin-bottom: 16px;
     }
 
