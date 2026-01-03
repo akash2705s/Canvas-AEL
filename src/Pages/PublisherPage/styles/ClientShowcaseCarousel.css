@@ -47,7 +47,7 @@
 
 .client-showcase-carousel-slide {
     display: inline-block;
-    animation: 50s client-showcase-slide infinite linear;
+    animation: 80s client-showcase-slide infinite linear;
     will-change: transform;
 }
 

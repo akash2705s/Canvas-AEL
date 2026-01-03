@@ -16,7 +16,7 @@ const HeroSection = () => {
         <div className="hero-content">
           <div ref={textRef} className={`hero-text slide-in-left ${isTextVisible ? 'visible' : ''}`}>
             <h1 className="about-hero-title">
-            Turn Attention Into Revenue. Seamlessly.
+            Turn Attention Into Revenue.<br />Seamlessly.
             </h1>
             <p className="about-hero-description">
             Canvas AEL (Adaptive Engagement Layer) unlocks value from every viewer interaction—with zero flow break.
