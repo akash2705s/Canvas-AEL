@@ -10,6 +10,7 @@ import LinkedinIcon from '../assets/Footer/linkedin.svg';
 
 const Footer = () => {
     const location = useLocation();
+    const isRootPage = location.pathname === '/';
     const isInfraPage = location.pathname === '/infra';
     const isTVPPage = location.pathname === '/tvp';
     const isEnterprisePage = location.pathname === '/enterprise';
@@ -21,13 +22,15 @@ const Footer = () => {
                     {/* Left Column - Get Started */}
                     <div className="footer-left-column">
                         <h3 className="footer-section-title">
-                            {isTVPPage
-                                ? 'Request OEM Demo'
-                                : isInfraPage
-                                    ? 'Request Infra Demo'
-                                    : isEnterprisePage
-                                        ? 'Request Enterprise Demo'
-                                        : 'Request DSP Demo'
+                            {isRootPage
+                                ? 'Get Started'
+                                : isTVPPage
+                                    ? 'Request OEM Demo'
+                                    : isInfraPage
+                                        ? 'Request Infra Demo'
+                                        : isEnterprisePage
+                                            ? 'Request Enterprise Demo'
+                                            : 'Request DSP Demo'
                             }
                         </h3>
                         <nav className="footer-nav">
@@ -35,7 +38,7 @@ const Footer = () => {
                                 {/* First Column */}
                                 <ul className="footer-nav-list">
                                     <li className="footer-nav-item">
-                                        <a href="about" className="footer-nav-link">About</a>
+                                        <a href="/about" className="footer-nav-link">About</a>
                                     </li>
                                     <li className="footer-nav-item">
                                         <a href="#contact" className="footer-nav-link">Contact Us</a>
@@ -68,24 +71,38 @@ const Footer = () => {
                     {/* Right Column - Company Info */}
                     <div className="footer-right-column">
                         <h3 className="footer-company-title">
-                            {isTVPPage
-                                ? <>Canvas Space Inc.<br /> — Native CTV Interaction Infrastructure</>
-                                : isInfraPage
-                                    ? <>Canvas Space Inc.<br />—Runtime Interaction Infrastructure for CTV</>
-                                    : isEnterprisePage
-                                        ? 'Canvas Space — Runtime Interaction & Intent Infrastructure for CTV'
-                                        : <>Canvas Space Inc. <br />— CTV Interaction Intelligence</>
+                            {isRootPage
+                                ? 'Canvas Space Inc.'
+                                : isTVPPage
+                                    ? <>Canvas Space Inc.<br /> — Native CTV Interaction Infrastructure</>
+                                    : isInfraPage
+                                        ? <>Canvas Space Inc.<br />—Runtime Interaction Infrastructure for CTV</>
+                                        : isEnterprisePage
+                                            ? 'Canvas Space — Runtime Interaction & Intent Infrastructure for CTV'
+                                            : <>Canvas Space Inc. <br />— CTV Interaction Intelligence</>
                             }
                         </h3>
                         <div className="footer-company-info">
-                            <p className="footer-address">
-                                {isTVPPage
-                                    ? 'One runtime. Platform-wide. Monetizable.'
-                                    : isInfraPage
-                                        ? 'Deterministic intent. In-session. At scale.'
-                                        : 'Deterministic intent. In-session. At scale.'
-                                }
-                            </p>
+                            {isRootPage ? (
+                                <>
+                                    <p className="footer-address">
+                                        5548, Abington Drive, Newark,<br />
+                                        California, 94560
+                                    </p>
+                                    <p className="footer-email">
+                                        <a href="mailto:hello@canvas.space" className="footer-email-link">hello@canvas.space</a>
+                                    </p>
+                                </>
+                            ) : (
+                                <p className="footer-address">
+                                    {isTVPPage
+                                        ? 'One runtime. Platform-wide. Monetizable.'
+                                        : isInfraPage
+                                            ? 'Deterministic intent. In-session. At scale.'
+                                            : 'Deterministic intent. In-session. At scale.'
+                                    }
+                                </p>
+                            )}
                         </div>
 
                         {/* Social Media Icons */}
