@@ -16,11 +16,11 @@ const MomentsSection = () => {
     },
     {
       video: Video2,
-      title: 'Universal runtime triggers across content & ads',
+      title: <>Universal runtime triggers across<br />content & ads</>,
     },
     {
       video: Video3,
-      title: 'Sponsored platform moments & takeovers',
+      title: <>Sponsored platform moments<br />& takeovers</>,
     },
   ];
 

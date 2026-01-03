@@ -32,7 +32,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div ref={imageRef} className={`hero-image slide-in-right ${isImageVisible ? 'visible' : ''}`}>
-            <div style={{ position: 'relative' }}>
+            <div className="hero-video-wrapper">
               <video
                 src={HeroVideo}
                 className="hero-video"
@@ -41,21 +41,7 @@ const HeroSection = () => {
                 muted
                 playsInline
               />
-              <span style={{
-                position: 'absolute',
-                bottom: '16px',
-                left: '50%',
-                transform: 'translateX(-50%)',
-                fontFamily: 'var(--font-family-montserrat)',
-                fontWeight: 400,
-                fontSize: '13px',
-                color: '#ffffff',
-                backgroundColor: 'rgba(0, 0, 0, 0.7)',
-                padding: '8px 16px',
-                borderRadius: '6px',
-                letterSpacing: '0.02em',
-                whiteSpace: 'nowrap'
-              }}>
+              <span className="hero-video-overlay">
                 In-session choice • Runtime signal • No QR dependency
               </span>
             </div>

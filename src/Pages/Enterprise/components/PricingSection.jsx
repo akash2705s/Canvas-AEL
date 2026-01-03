@@ -31,7 +31,7 @@ const PricingSection = () => {
     return (
         <section ref={sectionRef} className={`pricing-section fade-in-section ${isVisible ? 'visible' : ''}`}>
             <div className="pricing-container">
-                <h2 className="pricing-title">Enterprise commercial models</h2>
+                <h2 className="enterprise-pricing-title">Enterprise Commercial Models</h2>
 
                 <div className="pricing-content">
                     {/* Left Column - Pricing Cards */}

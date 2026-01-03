@@ -36,7 +36,7 @@ const StrugglesSection = () => {
             <div className="struggles-container">
                 {/* Section Title */}
                 <h2 ref={titleRef} className={`struggles-title fade-in-section ${isTitleVisible ? 'visible' : ''}`}>
-                    TV platforms struggle because:
+                TV Platforms Struggle Because:
                 </h2>
 
                 {/* Struggles Cards */}

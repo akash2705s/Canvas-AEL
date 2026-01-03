@@ -27,7 +27,7 @@ const MomentsSection = () => {
   return (
     <section ref={sectionRef} className={`moments-section fade-in-section ${isVisible ? 'visible' : ''}`}>
       <div className="moments-container">
-        <h2 className="moments-title">Enterprise-grade interactive moments</h2>
+        <h2 className="moments-title">Enterprise-Grade Interactive Moments</h2>
 
         <div
           ref={rowsRef}
