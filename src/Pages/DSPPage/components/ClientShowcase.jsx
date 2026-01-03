@@ -1,8 +1,8 @@
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
 import '../../PublisherPage/styles/ClientShowcase.css';
-import HPLogo from '../../LandingPage/assets/client/hp.svg';
-import OTTStudioLogo from '../../LandingPage/assets/client/ott_studio.svg';
-import FmPlusLogo from '../../LandingPage/assets/client/Fmplus.svg';
+import SabioLogo from '../../LandingPage/assets/client/dsp/Sabio.png';
+import TheTradeDeskLogo from '../../LandingPage/assets/client/dsp/Thetradedesk.png';
+import NextrollLogo from '../../LandingPage/assets/client/dsp/Nextroll.png';
 import FireTVLogo from '../../LandingPage/assets/client/Env/firetv.svg';
 import VizioLogo from '../../LandingPage/assets/client/Env/vizio.svg';
 import RokuLogo from '../../LandingPage/assets/client/Env/roku.svg';
@@ -16,9 +16,9 @@ const ClientShowcase = () => {
 
     // Client logos
     const clientLogos = [
-        { name: 'HP', logo: HPLogo },
-        { name: 'OTT Studio', logo: OTTStudioLogo },
-        { name: 'FmPlus', logo: FmPlusLogo },
+        { name: 'Sabio', logo: SabioLogo },
+        { name: 'The Trade Desk', logo: TheTradeDeskLogo },
+        { name: 'Nextroll', logo: NextrollLogo },
         { name: 'Fire TV', logo: FireTVLogo },
         { name: 'Vizio', logo: VizioLogo },
         { name: 'Roku', logo: RokuLogo },
@@ -40,11 +40,11 @@ const ClientShowcase = () => {
                     <div className="client-logos-grid">
                         {clientLogos.length > 0 ? (
                             clientLogos.map((client, index) => (
-                                <div key={index} className="client-logo-item">
+                                <div key={index} className={`client-logo-item ${client.name === 'The Trade Desk' ? 'client-logo-item-tradedesk' : ''}`}>
                                     <img 
                                         src={client.logo} 
                                         alt={client.name} 
-                                        className={`client-logo-image ${client.name === 'FmPlus' ? 'client-logo-fmplus' : ''}`} 
+                                        className={`client-logo-image ${client.name === 'The Trade Desk' ? 'client-logo-extra-large' : ''}`} 
                                     />
                                 </div>
                             ))
