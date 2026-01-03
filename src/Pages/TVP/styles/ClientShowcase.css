@@ -1,13 +1,13 @@
-/* TVP Client Showcase Section Component Styles */
-.tvp-client-showcase-section {
+/* Client Showcase Section Component Styles */
+.client-showcase-section {
     position: relative;
-    padding: 80px 0;
+    padding: 0 0 20px 0;
     background: #FFFFFF;
-    overflow: hidden;
+    overflow: visible;
     margin: 0;
 }
 
-.tvp-client-showcase-container {
+.client-showcase-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 3em;
@@ -15,7 +15,7 @@
     z-index: 1;
 }
 
-.tvp-client-showcase-title {
+.client-showcase-title {
     font-family: var(--font-family-montserrat);
     font-weight: 700;
     font-size: 32px;
@@ -26,7 +26,7 @@
     margin: 0 0 16px 0;
 }
 
-.tvp-client-showcase-subtitle {
+.client-showcase-subtitle {
     font-family: var(--font-family-montserrat);
     font-weight: 500;
     font-size: 18px;
@@ -34,124 +34,50 @@
     letter-spacing: -0.01em;
     color: #4a4a4a;
     text-align: center;
-    margin: 0 0 60px 0;
-}
-
-.tvp-client-showcase-logos {
-    width: 100%;
-}
-
-.tvp-client-logos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 40px;
-    align-items: center;
-    justify-items: center;
-}
-
-.tvp-client-logo-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 80px;
-    opacity: 0.6;
-    transition: opacity 0.3s ease;
-}
-
-.tvp-client-logo-item:hover {
-    opacity: 1;
-}
-
-.tvp-client-logo-image {
-    max-width: 100%;
-    max-height: 60px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
-}
-
-.tvp-client-logo-item:hover .tvp-client-logo-image {
-    filter: grayscale(0%);
-}
-
-.tvp-client-logos-placeholder {
-    width: 100%;
-    min-height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #999;
-    font-family: var(--font-family-montserrat);
-    font-size: 14px;
+    margin: 0 0 40px 0;
 }
 
 /* Tablet Responsive Design */
 @media (min-width: 769px) and (max-width: 1439px) {
-    .tvp-client-showcase-container {
+    .client-showcase-container {
         padding: 0 2em;
     }
 
-    .tvp-client-showcase-title {
+    .client-showcase-title {
         font-size: 28px;
     }
 
-    .tvp-client-showcase-subtitle {
+    .client-showcase-subtitle {
         font-size: 16px;
-    }
-
-    .tvp-client-logos-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 30px;
     }
 }
 
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
-    .tvp-client-showcase-section {
-        padding: 60px 0;
+    .client-showcase-section {
+        padding: 20px 0 60px 0;
     }
 
-    .tvp-client-showcase-container {
+    .client-showcase-container {
         padding: 0 1em;
     }
 
-    .tvp-client-showcase-title {
+    .client-showcase-title {
         font-size: 24px;
     }
 
-    .tvp-client-showcase-subtitle {
+    .client-showcase-subtitle {
         font-size: 16px;
-        margin-bottom: 40px;
-    }
-
-    .tvp-client-logos-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-    }
-
-    .tvp-client-logo-item {
-        min-height: 60px;
-    }
-
-    .tvp-client-logo-image {
-        max-height: 50px;
+        margin-bottom: 30px;
     }
 }
 
 @media (max-width: 480px) {
-    .tvp-client-showcase-title {
+    .client-showcase-title {
         font-size: 22px;
     }
 
-    .tvp-client-showcase-subtitle {
+    .client-showcase-subtitle {
         font-size: 14px;
     }
-
-    .tvp-client-logos-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
 }
-
