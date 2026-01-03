@@ -1,13 +1,13 @@
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
 import '../styles/ClientShowcase.css';
-import MathrubhumiLogo from '../../LandingPage/assets/details-section/mathrubhumi.svg';
 import TheDrapersLogo from '../../LandingPage/assets/details-section/the-drapers.svg';
 import TheHinduLogo from '../../LandingPage/assets/details-section/the-hindu.svg';
-import HPLogo from '../../LandingPage/assets/client/hp.svg';
-import OTTStudioLogo from '../../LandingPage/assets/client/ott_studio.svg';
-import FmPlusLogo from '../../LandingPage/assets/client/Fmplus.svg';
-import SteveAILogo from '../../LandingPage/assets/client/steveai.svg';
-import FLSLogo from '../../LandingPage/assets/client/FLS.svg';
+import SteveAILogo from '../../LandingPage/assets/client/publisher/Steve AI.png';
+import OTTStudioLogo from '../../LandingPage/assets/client/publisher/OTT_Studio.png';
+import OneStudioLogo from '../../LandingPage/assets/client/publisher/One Studio.png';
+import FLSLogo from '../../LandingPage/assets/client/publisher/FLS.png';
+import BitcentralLogo from '../../LandingPage/assets/client/publisher/Bitcentral.png';
+import AnimakerLogo from '../../LandingPage/assets/client/publisher/Animaker small.png';
 
 const ClientShowcase = () => {
     const [sectionRef, isVisible] = useScrollAnimation();
@@ -16,14 +16,14 @@ const ClientShowcase = () => {
 
     // Client logos
     const clientLogos = [
-        { name: 'Mathrubhumi', logo: MathrubhumiLogo },
         { name: 'The Drapers', logo: TheDrapersLogo },
         { name: 'The Hindu', logo: TheHinduLogo },
-        { name: 'HP', logo: HPLogo },
+        { name: 'Steve AI', logo: SteveAILogo },
         { name: 'OTT Studio', logo: OTTStudioLogo },
-        { name: 'FmPlus', logo: FmPlusLogo },
-        { name: 'SteveAI', logo: SteveAILogo },
+        { name: 'One Studio', logo: OneStudioLogo },
         { name: 'FLS', logo: FLSLogo },
+        { name: 'Bitcentral', logo: BitcentralLogo },
+        { name: 'Animaker', logo: AnimakerLogo },
     ];
 
     return (
@@ -41,10 +41,21 @@ const ClientShowcase = () => {
                         {clientLogos.length > 0 ? (
                             clientLogos.map((client, index) => (
                                 <div key={index} className="client-logo-item">
-                                    <img 
-                                        src={client.logo} 
-                                        alt={client.name} 
-                                        className={`client-logo-image ${client.name === 'FmPlus' ? 'client-logo-fmplus' : ''}`} 
+                                    <img
+                                        src={client.logo}
+                                        alt={client.name}
+                                        className={`client-logo-image ${client.name === 'The Drapers' ||
+                                            client.name === 'The Hindu' ||
+                                            client.name === 'OTT Studio' ||
+                                            client.name === 'FLS'
+                                            ? 'client-logo-publisher-large'
+                                            : client.name === 'Steve AI' ||
+                                                client.name === 'One Studio'
+                                                ? 'client-logo-steve-one-large'
+                                                : client.name === 'Animaker'
+                                                    ? 'client-logo-animaker-large'
+                                                    : ''
+                                            }`}
                                     />
                                 </div>
                             ))
