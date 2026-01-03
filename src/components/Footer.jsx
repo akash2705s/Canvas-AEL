@@ -10,10 +10,12 @@ import LinkedinIcon from '../assets/Footer/linkedin.svg';
 
 const Footer = () => {
     const location = useLocation();
-    const isRootPage = location.pathname === '/' || location.pathname === '/publisher';
-    const isInfraPage = location.pathname === '/infra';
-    const isTVPPage = location.pathname === '/tvp';
-    const isEnterprisePage = location.pathname === '/enterprise';
+    const pathname = location.pathname.replace(/\/$/, ''); // Remove trailing slash
+    const isRootPage = pathname === '/' || pathname === '/publisher';
+    const isInfraPage = pathname === '/infra';
+    const isTVPPage = pathname === '/tvp';
+    const isEnterprisePage = pathname === '/enterprise';
+    const isDSPPage = pathname === '/dsp';
     return (
         <footer className="footer-section">
             <div className="footer-container">
@@ -30,7 +32,9 @@ const Footer = () => {
                                         ? 'Request Infra Demo'
                                         : isEnterprisePage
                                             ? 'Request Enterprise Demo'
-                                            : 'Request DSP Demo'
+                                            : isDSPPage
+                                                ? 'Request DSP Demo'
+                                                : 'Get Started'
                             }
                         </h3>
                         <nav className="footer-nav">
@@ -79,7 +83,9 @@ const Footer = () => {
                                         ? <>Canvas Space Inc.<br />—Runtime Interaction Infrastructure for CTV</>
                                         : isEnterprisePage
                                             ? 'Canvas Space — Runtime Interaction & Intent Infrastructure for CTV'
-                                            : <>Canvas Space Inc. <br />— CTV Interaction Intelligence</>
+                                            : isDSPPage
+                                                ? <>Canvas Space Inc. <br />— CTV Interaction Intelligence</>
+                                                : 'Canvas Space Inc.'
                             }
                         </h3>
                         <div className="footer-company-info">
@@ -93,15 +99,32 @@ const Footer = () => {
                                         <a href="mailto:hello@canvas.space" className="footer-email-link">hello@canvas.space</a>
                                     </p>
                                 </>
-                            ) : (
+                            ) : isDSPPage ? (
                                 <p className="footer-address">
-                                    {isTVPPage
-                                        ? 'One runtime. Platform-wide. Monetizable.'
-                                        : isInfraPage
-                                            ? 'Deterministic intent. In-session. At scale.'
-                                            : 'Deterministic intent. In-session. At scale.'
-                                    }
+                                    Deterministic intent. In-session. At scale.
                                 </p>
+                            ) : isTVPPage ? (
+                                <p className="footer-address">
+                                    One runtime. Platform-wide. Monetizable.
+                                </p>
+                            ) : isInfraPage ? (
+                                <p className="footer-address">
+                                    Deterministic intent. In-session. At scale.
+                                </p>
+                            ) : isEnterprisePage ? (
+                                <p className="footer-address">
+                                    Deterministic intent. In-session. At scale.
+                                </p>
+                            ) : (
+                                <>
+                                    <p className="footer-address">
+                                        5548, Abington Drive, Newark,<br />
+                                        California, 94560
+                                    </p>
+                                    <p className="footer-email">
+                                        <a href="mailto:hello@canvas.space" className="footer-email-link">hello@canvas.space</a>
+                                    </p>
+                                </>
                             )}
                         </div>
 
