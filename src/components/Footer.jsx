@@ -10,7 +10,7 @@ import LinkedinIcon from '../assets/Footer/linkedin.svg';
 
 const Footer = () => {
     const location = useLocation();
-    const pathname = location.pathname.replace(/\/$/, ''); // Remove trailing slash
+    const pathname = location.pathname.replace(/\/$/, '').toLowerCase(); // Remove trailing slash and convert to lowercase
     const isRootPage = pathname === '/' || pathname === '/publisher';
     const isInfraPage = pathname === '/infra';
     const isTVPPage = pathname === '/tvp';
@@ -26,14 +26,14 @@ const Footer = () => {
                         <h3 className="footer-section-title">
                             {isRootPage
                                 ? 'Get Started'
-                                : isTVPPage
-                                    ? 'Request OEM Demo'
-                                    : isInfraPage
-                                        ? 'Request Infra Demo'
-                                        : isEnterprisePage
-                                            ? 'Request Enterprise Demo'
-                                            : isDSPPage
-                                                ? 'Request DSP Demo'
+                                : isDSPPage
+                                    ? 'Request DSP Demo'
+                                    : isTVPPage
+                                        ? 'Request OEM Demo'
+                                        : isInfraPage
+                                            ? 'Request Infra Demo'
+                                            : isEnterprisePage
+                                                ? 'Request Enterprise Demo'
                                                 : 'Get Started'
                             }
                         </h3>
@@ -77,14 +77,14 @@ const Footer = () => {
                         <h3 className="footer-company-title">
                             {isRootPage
                                 ? 'Canvas Space Inc.'
-                                : isTVPPage
-                                    ? <>Canvas Space Inc.<br /> — Native CTV Interaction Infrastructure</>
-                                    : isInfraPage
-                                        ? <>Canvas Space Inc.<br />—Runtime Interaction Infrastructure for CTV</>
-                                        : isEnterprisePage
-                                            ? 'Canvas Space — Runtime Interaction & Intent Infrastructure for CTV'
-                                            : isDSPPage
-                                                ? <>Canvas Space Inc. <br />— CTV Interaction Intelligence</>
+                                : isDSPPage
+                                    ? <>Canvas Space Inc. <br />— CTV Interaction Intelligence</>
+                                    : isTVPPage
+                                        ? <>Canvas Space Inc.<br /> — Native CTV Interaction Infrastructure</>
+                                        : isInfraPage
+                                            ? <>Canvas Space Inc.<br />—Runtime Interaction Infrastructure for CTV</>
+                                            : isEnterprisePage
+                                                ? 'Canvas Space — Runtime Interaction & Intent Infrastructure for CTV'
                                                 : 'Canvas Space Inc.'
                             }
                         </h3>
