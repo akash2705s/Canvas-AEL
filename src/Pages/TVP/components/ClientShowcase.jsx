@@ -1,8 +1,8 @@
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
 import '../../PublisherPage/styles/ClientShowcase.css';
-import HPLogo from '../../LandingPage/assets/client/hp.svg';
 import OTTStudioLogo from '../../LandingPage/assets/client/ott_studio.svg';
 import FmPlusLogo from '../../LandingPage/assets/client/Fmplus.svg';
+import CPLogo from '../../LandingPage/assets/client/Env/cp.png';
 import FireTVLogo from '../../LandingPage/assets/client/Env/firetv.svg';
 import VizioLogo from '../../LandingPage/assets/client/Env/vizio.svg';
 import RokuLogo from '../../LandingPage/assets/client/Env/roku.svg';
@@ -16,9 +16,9 @@ const ClientShowcase = () => {
 
     // Client logos
     const clientLogos = [
-        { name: 'HP', logo: HPLogo },
         { name: 'OTT Studio', logo: OTTStudioLogo },
         { name: 'FmPlus', logo: FmPlusLogo },
+        { name: 'CP', logo: CPLogo },
         { name: 'Fire TV', logo: FireTVLogo },
         { name: 'Vizio', logo: VizioLogo },
         { name: 'Roku', logo: RokuLogo },
@@ -41,7 +41,11 @@ const ClientShowcase = () => {
                         {clientLogos.length > 0 ? (
                             clientLogos.map((client, index) => (
                                 <div key={index} className="client-logo-item">
-                                    <img src={client.logo} alt={client.name} className="client-logo-image" />
+                                    <img
+                                        src={client.logo}
+                                        alt={client.name}
+                                        className={`client-logo-image ${client.name === 'FmPlus' ? 'client-logo-fmplus' : ''}`}
+                                    />
                                 </div>
                             ))
                         ) : (

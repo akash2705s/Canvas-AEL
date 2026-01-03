@@ -70,12 +70,31 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12), 0px 2px 5px rgba(0, 0, 0, 0.08);
 }
 
+.client-logo-item-center {
+    grid-column: 2 / 3;
+    width: 100%;
+    max-width: 100%;
+    transform: translateX(calc(50% + 20px));
+}
+
+.client-logo-item-center:hover {
+    transform: translateX(calc(50% + 20px)) translateY(-2px);
+}
+
 .client-logo-image {
     max-width: 100%;
     max-height: 45px;
     width: auto;
     height: auto;
     object-fit: contain;
+}
+
+.client-logo-fmplus {
+    max-height: 60px !important;
+}
+
+.client-logo-large {
+    max-height: 90px !important;
 }
 
 .client-logos-placeholder {
@@ -109,6 +128,17 @@
         row-gap: 14px;
     }
 
+    .client-logo-item-center {
+        grid-column: 2 / 3;
+        width: 100%;
+        max-width: 100%;
+        transform: translateX(calc(50% + 16px));
+    }
+
+    .client-logo-item-center:hover {
+        transform: translateX(calc(50% + 16px)) translateY(-2px);
+    }
+
     .client-logo-item {
         min-height: 85px;
         padding: 18px 14px;
@@ -117,6 +147,14 @@
 
     .client-logo-image {
         max-height: 42px;
+    }
+
+    .client-logo-fmplus {
+        max-height: 55px !important;
+    }
+
+    .client-logo-large {
+        max-height: 85px !important;
     }
 }
 
@@ -149,6 +187,17 @@
         row-gap: 12px;
     }
 
+    .client-logo-item-center {
+        grid-column: 1 / 2;
+        width: 100%;
+        max-width: 100%;
+        transform: none;
+    }
+
+    .client-logo-item-center:hover {
+        transform: translateY(-2px);
+    }
+
     .client-logo-item {
         min-height: 85px;
         padding: 18px 12px;
@@ -157,6 +206,14 @@
 
     .client-logo-image {
         max-height: 40px;
+    }
+
+    .client-logo-fmplus {
+        max-height: 50px !important;
+    }
+
+    .client-logo-large {
+        max-height: 80px !important;
     }
 }
 
@@ -175,6 +232,17 @@
         row-gap: 10px;
     }
 
+    .client-logo-item-center {
+        grid-column: 1 / 2;
+        width: 100%;
+        max-width: 100%;
+        transform: none;
+    }
+
+    .client-logo-item-center:hover {
+        transform: translateY(-2px);
+    }
+
     .client-logo-item {
         min-height: 75px;
         padding: 14px 10px;
@@ -183,5 +251,13 @@
 
     .client-logo-image {
         max-height: 35px;
+    }
+
+    .client-logo-fmplus {
+        max-height: 45px !important;
+    }
+
+    .client-logo-large {
+        max-height: 70px !important;
     }
 }

@@ -1,13 +1,14 @@
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
 import '../../PublisherPage/styles/ClientShowcase.css';
-import HPLogo from '../../LandingPage/assets/client/hp.svg';
-import OTTStudioLogo from '../../LandingPage/assets/client/ott_studio.svg';
-import FmPlusLogo from '../../LandingPage/assets/client/Fmplus.svg';
-import FireTVLogo from '../../LandingPage/assets/client/Env/firetv.svg';
-import VizioLogo from '../../LandingPage/assets/client/Env/vizio.svg';
-import RokuLogo from '../../LandingPage/assets/client/Env/roku.svg';
-import SamsungLogo from '../../LandingPage/assets/client/Env/samsung.svg';
-import LGLogo from '../../LandingPage/assets/client/Env/lg.svg';
+import InfillionLogo from '../../LandingPage/assets/client/infra/Infillion.png';
+import AnokiLogo from '../../LandingPage/assets/client/infra/Anoki.png';
+import OriginLogo from '../../LandingPage/assets/client/infra/Origin.png';
+import CineverseLogo from '../../LandingPage/assets/client/infra/Cineverse.png';
+import IABLogo from '../../LandingPage/assets/client/infra/IAB.png';
+import SVTALogo from '../../LandingPage/assets/client/infra/SVTA.png';
+import BitmovinLogo from '../../LandingPage/assets/client/infra/Bitmovin.png';
+import GumgumLogo from '../../LandingPage/assets/client/infra/Gumgum.png';
+import BitcentralLogo from '../../LandingPage/assets/client/infra/Bitcentral.png';
 
 const ClientShowcase = () => {
     const [sectionRef, isVisible] = useScrollAnimation();
@@ -16,14 +17,15 @@ const ClientShowcase = () => {
 
     // Client logos
     const clientLogos = [
-        { name: 'HP', logo: HPLogo },
-        { name: 'OTT Studio', logo: OTTStudioLogo },
-        { name: 'FmPlus', logo: FmPlusLogo },
-        { name: 'Fire TV', logo: FireTVLogo },
-        { name: 'Vizio', logo: VizioLogo },
-        { name: 'Roku', logo: RokuLogo },
-        { name: 'Samsung', logo: SamsungLogo },
-        { name: 'LG', logo: LGLogo },
+        { name: 'Infillion', logo: InfillionLogo },
+        { name: 'Anoki', logo: AnokiLogo },
+        { name: 'Origin', logo: OriginLogo },
+        { name: 'Cineverse', logo: CineverseLogo },
+        { name: 'IAB', logo: IABLogo },
+        { name: 'SVTA', logo: SVTALogo },
+        { name: 'Bitmovin', logo: BitmovinLogo },
+        { name: 'Gumgum', logo: GumgumLogo },
+        { name: 'Bitcentral', logo: BitcentralLogo },
     ];
 
     return (
@@ -40,8 +42,12 @@ const ClientShowcase = () => {
                     <div className="client-logos-grid">
                         {clientLogos.length > 0 ? (
                             clientLogos.map((client, index) => (
-                                <div key={index} className="client-logo-item">
-                                    <img src={client.logo} alt={client.name} className="client-logo-image" />
+                                <div key={index} className={`client-logo-item ${index === 8 ? 'client-logo-item-center' : ''}`}>
+                                    <img
+                                        src={client.logo}
+                                        alt={client.name}
+                                        className={`client-logo-image ${client.name === 'Bitmovin' || client.name === 'Origin' ? 'client-logo-large' : ''}`}
+                                    />
                                 </div>
                             ))
                         ) : (

@@ -41,7 +41,11 @@ const ClientShowcase = () => {
                         {clientLogos.length > 0 ? (
                             clientLogos.map((client, index) => (
                                 <div key={index} className="client-logo-item">
-                                    <img src={client.logo} alt={client.name} className="client-logo-image" />
+                                    <img
+                                        src={client.logo}
+                                        alt={client.name}
+                                        className={`client-logo-image ${client.name === 'FmPlus' ? 'client-logo-fmplus' : ''}`}
+                                    />
                                 </div>
                             ))
                         ) : (
