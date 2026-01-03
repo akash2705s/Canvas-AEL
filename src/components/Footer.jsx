@@ -10,7 +10,7 @@ import LinkedinIcon from '../assets/Footer/linkedin.svg';
 
 const Footer = () => {
     const location = useLocation();
-    const isRootPage = location.pathname === '/';
+    const isRootPage = location.pathname === '/' || location.pathname === '/publisher';
     const isInfraPage = location.pathname === '/infra';
     const isTVPPage = location.pathname === '/tvp';
     const isEnterprisePage = location.pathname === '/enterprise';

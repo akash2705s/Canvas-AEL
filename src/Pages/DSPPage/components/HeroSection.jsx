@@ -20,9 +20,8 @@ const HeroSection = () => {
         <div className="hero-content">
           <div ref={textRef} className={`hero-text slide-in-left ${isTextVisible ? 'visible' : ''}`}>
             <h1 className="hero-title">
-              YOUR CREATIVE. OUR RUNTIME.<br />
-              INTERACTIVE CTV ADS THAT<br />
-              ACTUALLY SCALE
+            A New Interaction Signal Layer for CTV<br/>
+            Built for DSPs to Optimize Beyond Impressions and CPMs
             </h1>
             {/* <p className="hero-description">
               Drop Canvas into your player. Trigger interactive ads<br />anywhere. Increase yield instantly.

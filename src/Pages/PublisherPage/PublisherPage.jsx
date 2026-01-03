@@ -3,6 +3,7 @@ import StrugglesSection from './components/StrugglesSection';
 import SolutionSection from './components/SolutionSection';
 import PricingSection from './components/PricingSection';
 import MomentsSection from './components/MomentsSection';
+import ClientShowcase from './components/ClientShowcase';
 
 const PublisherPage = () => {
   return (
@@ -12,6 +13,7 @@ const PublisherPage = () => {
       <SolutionSection />
       <PricingSection />
       <MomentsSection />
+      <ClientShowcase />
     </>
   );
 };

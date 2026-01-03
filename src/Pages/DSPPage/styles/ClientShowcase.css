@@ -1,0 +1,157 @@
+/* DSP Client Showcase Section Component Styles */
+.dsp-client-showcase-section {
+    position: relative;
+    padding: 80px 0;
+    background: #FFFFFF;
+    overflow: hidden;
+    margin: 0;
+}
+
+.dsp-client-showcase-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 3em;
+    position: relative;
+    z-index: 1;
+}
+
+.dsp-client-showcase-title {
+    font-family: var(--font-family-montserrat);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: #1a1a1a;
+    text-align: center;
+    margin: 0 0 16px 0;
+}
+
+.dsp-client-showcase-subtitle {
+    font-family: var(--font-family-montserrat);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+    color: #4a4a4a;
+    text-align: center;
+    margin: 0 0 60px 0;
+}
+
+.dsp-client-showcase-logos {
+    width: 100%;
+}
+
+.dsp-client-logos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 40px;
+    align-items: center;
+    justify-items: center;
+}
+
+.dsp-client-logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.dsp-client-logo-item:hover {
+    opacity: 1;
+}
+
+.dsp-client-logo-image {
+    max-width: 100%;
+    max-height: 60px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.dsp-client-logo-item:hover .dsp-client-logo-image {
+    filter: grayscale(0%);
+}
+
+.dsp-client-logos-placeholder {
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-family: var(--font-family-montserrat);
+    font-size: 14px;
+}
+
+/* Tablet Responsive Design */
+@media (min-width: 769px) and (max-width: 1439px) {
+    .dsp-client-showcase-container {
+        padding: 0 2em;
+    }
+
+    .dsp-client-showcase-title {
+        font-size: 28px;
+    }
+
+    .dsp-client-showcase-subtitle {
+        font-size: 16px;
+    }
+
+    .dsp-client-logos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 30px;
+    }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .dsp-client-showcase-section {
+        padding: 60px 0;
+    }
+
+    .dsp-client-showcase-container {
+        padding: 0 1em;
+    }
+
+    .dsp-client-showcase-title {
+        font-size: 24px;
+    }
+
+    .dsp-client-showcase-subtitle {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .dsp-client-logos-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    .dsp-client-logo-item {
+        min-height: 60px;
+    }
+
+    .dsp-client-logo-image {
+        max-height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dsp-client-showcase-title {
+        font-size: 22px;
+    }
+
+    .dsp-client-showcase-subtitle {
+        font-size: 14px;
+    }
+
+    .dsp-client-logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+

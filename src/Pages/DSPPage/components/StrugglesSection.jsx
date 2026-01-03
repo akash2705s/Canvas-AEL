@@ -36,7 +36,7 @@ const StrugglesSection = () => {
             <div className="struggles-container">
                 {/* Section Title */}
                 <h2 ref={titleRef} className={`struggles-title fade-in-section ${isTitleVisible ? 'visible' : ''}`}>
-                    DSPs are forced to optimize blind because:
+                DSPs Are Forced to Optimize Blind Because:
                 </h2>
 
                 {/* Struggles Cards */}
